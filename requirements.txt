@@ -1,0 +1,9 @@
+anthropic
+sentence-transformers
+psycopg[binary]
+pgvector
+pymupdf
+python-dotenv
+requests
+tqdm
+numpy

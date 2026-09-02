@@ -1,0 +1,86 @@
+{
+  "kozsofra": [
+    {
+      "question": "Cumartesi günü saat kaça kadar açıksınız?",
+      "expected_source_contains": "sss.txt",
+      "in_scope": true
+    },
+    {
+      "question": "Adana kebap kaç TL?",
+      "expected_source_contains": "menu.txt",
+      "in_scope": true
+    },
+    {
+      "question": "6 kişilik rezervasyonu geç iptal edersem ne olur?",
+      "expected_source_contains": "sss.txt",
+      "in_scope": true
+    },
+    {
+      "question": "Evcil hayvanımı hangi şubeye getirebilirim?",
+      "expected_source_contains": "sss.txt",
+      "in_scope": true
+    },
+    {
+      "question": "Glutensiz seçenek olarak ne önerirsiniz?",
+      "expected_source_contains": "menu.txt",
+      "in_scope": true
+    },
+    {
+      "question": "Catering broşüründe doğum günü paketi fiyatları neler?",
+      "expected_source_contains": "catering",
+      "in_scope": true
+    },
+    {
+      "question": "El yazısı notta hangi özel istekten bahsediliyor?",
+      "expected_source_contains": "el_yazisi",
+      "in_scope": true
+    },
+    {
+      "question": "Şikayetimi nereye bildirebilirim?",
+      "expected_source_contains": "politikalar.txt",
+      "in_scope": true
+    },
+    {
+      "question": "Restoranınızda kaç tane şef çalışıyor?",
+      "expected_source_contains": null,
+      "in_scope": false
+    },
+    {
+      "question": "İstanbul'un nüfusu kaçtır?",
+      "expected_source_contains": null,
+      "in_scope": false
+    },
+    {
+      "question": "2027 yılı için yeni şube açma planınız var mı?",
+      "expected_source_contains": null,
+      "in_scope": false
+    }
+  ],
+  "wikipedia": [
+    {
+      "question": "Dolma nasıl yapılır?",
+      "expected_source_contains": "Dolma",
+      "in_scope": true
+    },
+    {
+      "question": "Kebap çeşitleri nelerdir?",
+      "expected_source_contains": "Kebap",
+      "in_scope": true
+    },
+    {
+      "question": "Türk kahvesi nasıl yapılır?",
+      "expected_source_contains": "kahve",
+      "in_scope": true
+    },
+    {
+      "question": "Amerika Birleşik Devletleri'nin başkenti neresidir?",
+      "expected_source_contains": null,
+      "in_scope": false
+    },
+    {
+      "question": "Python programlama dili ne zaman çıktı?",
+      "expected_source_contains": null,
+      "in_scope": false
+    }
+  ]
+}

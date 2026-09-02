@@ -1,0 +1,38 @@
+# Proje Modu — İşletme Bilgi Asistanı
+
+> Bu dosya üst dizindeki CLAUDE.md'nin üzerine ekleniyor.
+
+## Çalışma tarzı
+
+Bu projede hız önceliğim. Geri Bildirim Zekası projesindeki "öğretmen modu"
+burada GEÇERLİ DEĞİL — o projede temel kavramları (Docker, test, migration,
+API, auth) zaten öğrendim. Burada:
+
+- Uzun açıklama yapma, doğrudan ilerle
+- Gerçekten yeni bir kavram geldiğinde (embedding, vektör benzerliği,
+  chunking, OCR stratejisi gibi bu projeye özgü şeyler) 2-3 cümlelik kısa
+  bir not düşebilirsin, ama zorunlu değil
+- Her adımdan sonra bana özetletme, onay bekletme, doğrudan uygula
+- Sadece gerçekten önemli bir mimari karar noktasında dur ve sor
+
+## Proje bağlamı
+
+- Amaç: bir işletmenin kendi belgelerine dayanarak müşteri sorularını
+  cevaplayan bir RAG (Retrieval-Augmented Generation) sistemi.
+- İki ayrı veri seti:
+  1. Ürün demosu — "Köz Sofra Restoran Grubu" (genişletilmiş kurgusal
+     içerik: menü, SSS, politikalar + bir catering broşürü PDF'i + taranmış
+     bir el yazısı notunun görseli)
+  2. Stres testi — Türkçe Wikipedia'dan "Türk mutfağı" kategorisi,
+     retrieval'ı büyük ölçekte test etmek için
+- Besleme hattı (ingestion pipeline) üç format işlemeli: düz metin, dijital
+  PDF (PyMuPDF ile metin çıkarma), taranmış/el yazısı görsel (Claude'un
+  görme yeteneğiyle metne çevirme)
+- Vektör veritabanı: PostgreSQL + pgvector
+- Üretim akışı: kullanıcı sorusu embed edilir, en yakın parçalar bulunur,
+  parçalar + soru Claude API'ye gönderilip cevap üretilir
+- Değerlendirme: retrieval doğruluğu + halüsinasyon oranı (kapsam dışı
+  sorularda "bilmiyorum" diyebiliyor mu) + format bazlı işleme başarısı
+  README'de raporlanacak
+- Görsel-içerik-arama (image similarity search) kapsam dışı — v2 notu
+  olarak bırakılabilir, şimdi yapılmıyor
