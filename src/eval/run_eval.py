@@ -18,8 +18,15 @@ DATASET_PATH = Path(__file__).parent / "eval_dataset.json"
 _REFUSAL_MARKERS = ("bilgim yok", "bilmiyorum")
 
 
+def _tr_lower(s: str) -> str:
+    # Python'ın varsayılan str.lower() Türkçe "İ"yi "i" + birleşen nokta işaretine
+    # çevirir (Unicode kuralı), bu da "İçli" gibi kelimelerin küçük harfli
+    # karşılıklarıyla eşleşmesini bozar. Türkçe harf eşlemesini elle yapıyoruz.
+    return s.replace("İ", "i").replace("I", "ı").lower()
+
+
 def _is_refusal(answer: str) -> bool:
-    lowered = answer.lower()
+    lowered = _tr_lower(answer)
     return any(marker in lowered for marker in _REFUSAL_MARKERS)
 
 
@@ -36,7 +43,7 @@ def run_for_dataset(dataset: str, cases: list[dict]) -> dict:
         source_hit = None
         if case["in_scope"]:
             source_hit = any(
-                case["expected_source_contains"].lower() in s.lower() for s in result["sources"]
+                _tr_lower(case["expected_source_contains"]) in _tr_lower(s) for s in result["sources"]
             )
             if source_hit:
                 retrieval_correct += 1

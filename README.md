@@ -64,12 +64,15 @@ dosyasına yazılır.
 | Veri seti | Retrieval doğruluğu | Halüsinasyon oranı | Soru sayısı |
 |---|---|---|---|
 | kozsofra | 1.0 | 0.0 | 11 (8 kapsam içi, 3 kapsam dışı) |
-| wikipedia | 1.0 | 0.0 | 5 (3 kapsam içi, 2 kapsam dışı) |
+| wikipedia | 0.958 | 0.0 | 30 (24 kapsam içi, 6 kapsam dışı) |
 
 - **Retrieval doğruluğu**: kapsam içi sorularda beklenen kaynağın top-k sonuçlarda bulunma oranı.
 - **Halüsinasyon oranı**: kapsam dışı sorularda modelin uydurma cevap verme oranı (doğru davranış: "Bu konuda bilgim yok" demek).
 - kozsofra veri setinde 3 format da (düz metin, PDF, el yazısı görsel) doğru işlendi ve sorgulandı.
 - Not: `retriever.py`'deki benzerlik eşiği (0.78) yalnızca çok alakasız soruları (örn. "Python ne zaman çıktı?") filtreliyor; "Restoranınızda kaç şef çalışıyor?" gibi konuyla ilgili görünen ama kapsam dışı sorularda eşik aşılıyor ve halüsinasyon kontrolü tamamen Claude'un sistem promptuna dayanıyor — bu senaryoda da başarılı oldu.
+- **Bilinen retrieval açığı**: "Menemene peynir konur mu?" sorusunda embedding, "peynir" kelimesine ağırlık vererek peynir makalelerini getiriyor, Menemen makalesini değil — model bu yüzden doğru şekilde "bilgim yok" diyor ama asıl kaynağı bulamıyor. Tek bir kelimenin (ürün/malzeme adı) baskın olduğu sorularda embedding tabanlı retrieval'ın bir zaafı olarak not düşüyoruz; bir sonraki adım olarak hybrid search (embedding + anahtar kelime) denenebilir.
+
+**Dürüstlük notu:** Bu, istatistiksel olarak güçlü bir değerlendirme değil — küçük, elle hazırlanmış bir doğrulama kümesi (kozsofra: 11, wikipedia: 30 soru). Amaç kapsamlı bir benchmark değil, üç format işleme yolunun (metin/PDF/görsel), veri seti izolasyonunun ve halüsinasyon önleme mekanizmasının gerçekten çalıştığını göstermek. Wikipedia sorularının bir kısmı bilinçli olarak birbirine yakın yemekler arasında (İmambayıldı/Karnıyarık, kavurma/pastırma, içli köfte/içli pide gibi) ayrım gerektiren zor sorulardan oluşuyor. %100'den farklı bir sonuç (%95.8) çıkması, testin gerçekten zorlayıcı olduğunun bir göstergesi.
 
 ## Kapsam dışı (v2 notu)
 

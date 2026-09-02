@@ -73,12 +73,137 @@
       "in_scope": true
     },
     {
+      "question": "Kelle paça nasıl pişirilir?",
+      "expected_source_contains": "paça",
+      "in_scope": true
+    },
+    {
+      "question": "İmambayıldı'nın içinde et bulunur mu?",
+      "expected_source_contains": "İmambayıldı",
+      "in_scope": true
+    },
+    {
+      "question": "Karnıyarık ile İmambayıldı arasındaki fark nedir?",
+      "expected_source_contains": "arık",
+      "in_scope": true
+    },
+    {
+      "question": "Musakka hangi malzemelerle yapılır?",
+      "expected_source_contains": "Musakka",
+      "in_scope": true
+    },
+    {
+      "question": "Lahana sarması hangi malzemelerle yapılır?",
+      "expected_source_contains": "sarması",
+      "in_scope": true
+    },
+    {
+      "question": "Biber dolması ile lahana sarması arasındaki fark nedir?",
+      "expected_source_contains": "dolma",
+      "in_scope": true
+    },
+    {
+      "question": "Poğaça çeşitleri nelerdir?",
+      "expected_source_contains": "Poğaça",
+      "in_scope": true
+    },
+    {
+      "question": "Nokul ne tür bir hamur işidir?",
+      "expected_source_contains": "Nokul",
+      "in_scope": true
+    },
+    {
+      "question": "Çökertme kebabı nasıl servis edilir?",
+      "expected_source_contains": "kertme",
+      "in_scope": true
+    },
+    {
+      "question": "Kâğıt kebabı nasıl pişirilir?",
+      "expected_source_contains": "ğıt_kebabı",
+      "in_scope": true
+    },
+    {
+      "question": "İskender kebabın üzerine ne dökülür?",
+      "expected_source_contains": "İskender",
+      "in_scope": true
+    },
+    {
+      "question": "Kavurma ile pastırma arasındaki fark nedir?",
+      "expected_source_contains": "urma",
+      "in_scope": true
+    },
+    {
+      "question": "Fırın fasulyesi ile kuru fasulye arasındaki fark nedir?",
+      "expected_source_contains": "fasulye",
+      "in_scope": true
+    },
+    {
+      "question": "Fasulye pilakisi soğuk mu sıcak mı servis edilir?",
+      "expected_source_contains": "pilaki",
+      "in_scope": true
+    },
+    {
+      "question": "Çi börek nereye özgüdür?",
+      "expected_source_contains": "börek",
+      "in_scope": true
+    },
+    {
+      "question": "İçli köfte ile içli pide aynı şey mi?",
+      "expected_source_contains": "içli",
+      "in_scope": true
+    },
+    {
+      "question": "Gözleme hangi bölgeye özgüdür?",
+      "expected_source_contains": "Gözleme",
+      "in_scope": true
+    },
+    {
+      "question": "Kumpir nereden çıkmıştır?",
+      "expected_source_contains": "Kumpir",
+      "in_scope": true
+    },
+    {
+      "question": "Islak hamburgerin özelliği nedir?",
+      "expected_source_contains": "hamburger",
+      "in_scope": true
+    },
+    {
+      "question": "Menemene peynir konur mu?",
+      "expected_source_contains": "Menemen",
+      "in_scope": true
+    },
+    {
+      "question": "Çılbır nasıl bir yemektir?",
+      "expected_source_contains": "Çılbır",
+      "in_scope": true
+    },
+    {
       "question": "Amerika Birleşik Devletleri'nin başkenti neresidir?",
       "expected_source_contains": null,
       "in_scope": false
     },
     {
       "question": "Python programlama dili ne zaman çıktı?",
+      "expected_source_contains": null,
+      "in_scope": false
+    },
+    {
+      "question": "İtalyan mutfağının en ünlü yemeği nedir?",
+      "expected_source_contains": null,
+      "in_scope": false
+    },
+    {
+      "question": "Fransız mutfağında hangi soslar öne çıkar?",
+      "expected_source_contains": null,
+      "in_scope": false
+    },
+    {
+      "question": "Sizce en lezzetli yemek hangisi?",
+      "expected_source_contains": null,
+      "in_scope": false
+    },
+    {
+      "question": "Bugünkü dolar kuru kaç TL?",
       "expected_source_contains": null,
       "in_scope": false
     }
